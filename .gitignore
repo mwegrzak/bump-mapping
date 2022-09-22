@@ -1,0 +1,8 @@
+
+.cache/
+dist/bundle.js
+node_modules/
+*.log
+package-lock.json
+.vscode/
+

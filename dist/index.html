@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Grafika komputerowa</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .infoBox {
+        background-color: rgba(0,0,0,0.3); 
+        border-radius: 15px; 
+        padding: 20px; 
+        width: 100%;
+      }
+
+      .controls {
+        background-color: rgba(0,0,0,0.3); 
+        border-radius: 15px; 
+        padding: 20px; 
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      .controls li {
+        margin-left: 20px;
+        margin-top: 5px;
+      }
+
+      .hide {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .hideButton {
+        cursor: pointer;
+      }
+
+      .hideButton:hover {
+        font-weight: bold;
+      }
+
+      .wrapper {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-top: 10px;
+        width: 450px;
+      }
+      #switchTexturesWrapper{
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <div class="wrapper">
+      <div class="infoBox">
+        <h2>Grafika komputerowa - bump mapping</h2>
+        <p>Adrian Aleksanderek, Maciej Węgrzak</p>
+      </div>
+
+      <div id="controlsWrapper" class="controls">
+        <div class="hide">
+          <h2>Sterowanie kamerą</h2>
+          <div class="hideButton" id="hideButton">
+          Zamknij
+          </div>
+        </div>
+
+        <div class="controlsInfo">
+          <p>Sterowanie za pomocą myszy:</p>
+          <ul>
+            <li>SCROLL: oddal / przybliż</li>
+            <li>LPM + PRZECIĄGNIJ: obrót kamery</li>
+            <li>PPM + PRZECIĄGNIJ: przesunięcie kamery</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="switchTexturesWrapper" class="infoBox">
+        <h2>Zmień tekstury</h2> 
+        <button id="switchToBrickButton">Cegła</button>
+        <button id="switchToMetalButton">Metal</button>
+        <button id="switchToLavaButton">Lawa</button>
+        <button id="switchToGrassButton">Trawa</button>
+
+      </div>
+    </div>
+
+    <script src="bundle.js"></script>
+
+</body>
+</html>
