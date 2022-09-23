@@ -53,21 +53,21 @@ class Objects {
     }
 
     renderPlane = (x: number, y: number, texture: THREE.Texture) => {
-        const plane = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.MeshStandardMaterial({ map: texture }))
+        const plane = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.MeshStandardMaterial({ side: THREE.DoubleSide, map: texture }))
         plane.position.y = y;
         plane.position.x = x;
         return plane;
     }
 
     renderPlaneWithBumpMap = (x: number, y: number, texture: THREE.Texture, bumpMap: THREE.Texture) => {
-        const plane = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.MeshStandardMaterial({ map: texture, bumpMap: bumpMap }))
+        const plane = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.MeshStandardMaterial({side: THREE.DoubleSide, map: texture, bumpMap: bumpMap }))
         plane.position.y = y;
         plane.position.x = x;
         return plane;
     }
 
     renderFloor = (color: number) => {
-        const plane = new THREE.Mesh(new THREE.PlaneGeometry(20, 20, 1), new THREE.MeshPhongMaterial({ color: color}));
+        const plane = new THREE.Mesh(new THREE.PlaneGeometry(20, 20, 1), new THREE.MeshPhongMaterial({side: THREE.DoubleSide, color: color}));
         plane.rotation.x = - Math.PI / 2;
         return plane;
     }
@@ -77,7 +77,7 @@ class Objects {
             const geometry = new THREE.TextGeometry(text, {
                 font: font,
                 size: size,
-                height: 0.5
+                height: 0.1
             });
             const materials = [
                 new THREE.MeshPhongMaterial({ color: 0xff6600 }), 
