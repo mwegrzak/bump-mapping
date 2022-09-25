@@ -3,92 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>Grafika komputerowa</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        font-size: 18px;
-      }
-
-      h2 {
-        font-size: 22px;
-      }
-
-      .infoBox {
-        background-color: rgba(0,0,0,0.3); 
-        border-radius: 15px; 
-        padding: 20px; 
-        width: 100%;
-      }
-
-      .controls {
-        background-color: rgba(0,0,0,0.3); 
-        border-radius: 15px; 
-        padding: 20px; 
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-        width: 100%;
-      }
-
-      .controls li {
-        margin-left: 20px;
-        margin-top: 5px;
-      }
-
-      .hide {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      .hideButton {
-        cursor: pointer;
-      }
-
-      .hideButton:hover {
-        font-weight: bold;
-      }
-
-      .wrapper {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        padding-left: 10px;
-        padding-top: 10px;
-        width: 450px;
-      }
-
-      #switchTexturesWrapper {
-        margin-top: 10px;
-      }
-
-      .buttonsWrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-top: 10px;
-      }
-
-      .textureBtn {
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 10px;
-        background-color: rgba(242,242,242,0.3);
-        font-weight: bold;
-        border-width: 0;
-        font-size: 15px;
-      }
-
-      .textureBtn:hover {
-        background-color: rgba(242,242,242,0.7);
-      }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
-    
-
     <div class="wrapper">
       <div class="infoBox">
         <h2>Grafika komputerowa - bump mapping</h2>
@@ -99,11 +16,11 @@
         <div class="hide">
           <h2>Sterowanie kamerą</h2>
           <div class="hideButton" id="hideButton">
-          Zamknij
+            <p id="hideParagraph">Zamknij</p>
           </div>
         </div>
 
-        <div class="controlsInfo">
+        <div id="controlsInfo" class="controlsInfo">
           <p>Sterowanie za pomocą myszy:</p>
           <ul>
             <li>SCROLL: oddal / przybliż</li>
@@ -114,17 +31,38 @@
       </div>
 
       <div id="switchTexturesWrapper" class="infoBox">
-        <h2>Zmień tekstury</h2>
-        <div class="buttonsWrapper">
-          <button id="switchToBrickButton" class="textureBtn">Cegła</button>
-          <button id="switchToMetalButton" class="textureBtn">Metal</button>
-          <button id="switchToLavaButton" class="textureBtn">Lawa</button>
-          <button id="switchToGrassButton" class="textureBtn">Trawa</button>
-        </div> 
+        <div class="hide">
+          <h2>Opcje</h2>
+          <div class="hideButton" id="hideOptionsButton">
+            <p id="hideOptionsParagraph">Zamknij</p>
+          </div>
+        </div>
+
+        <div id="optionsWrapper">
+          <h2>Zmiana tekstur</h2>
+          <div id="textureButtonsWrapper" class="textureButtonsWrapper">
+            <button id="switchToBrickButton" class="textureBtn">Cegła</button>
+            <button id="switchToMetalButton" class="textureBtn">Metal</button>
+            <button id="switchToStoneButton" class="textureBtn">Kamień</button>
+            <button id="switchToWoodButton" class="textureBtn">Drewno</button>
+            <button id="switchToLeatherButton" class="textureBtn">Skóra</button>
+          </div>
+
+          <div id="switchSpeedWrapper">
+            <h2>Prędkość źródła światła</h2>
+            <div id="speedButtonsWrapper" class="speedButtonsWrapper">
+              <button id="speedUpButton" class="textureBtn speedButton">
+                +
+              </button>
+              <button id="speedDownButton" class="textureBtn speedButton">
+                -
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <script src="bundle.js"></script>
-
-</body>
+  </body>
 </html>

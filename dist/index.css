@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+.infoBox {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+}
+
+.controls {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.controls li {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.hide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hideButton {
+  cursor: pointer;
+}
+
+.hideButton:hover {
+  font-weight: bold;
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 400px;
+}
+
+#switchTexturesWrapper {
+  margin-top: 10px;
+}
+
+.textureButtonsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.textureBtn {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgba(242, 242, 242, 0.3);
+  font-weight: bold;
+  border-width: 0;
+  font-size: 15px;
+}
+
+.textureBtn:hover {
+  background-color: rgba(242, 242, 242, 0.7);
+}
+
+#switchSpeedWrapper {
+  margin-top: 15px;
+}
+.speedButtonsWrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.speedButton {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
